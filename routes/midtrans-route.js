@@ -4,12 +4,12 @@ import Midtrans from 'midtrans-client';
 const router = express.Router();
 
 const snap = new Midtrans.Snap({
-        isProduction: process.env.VITE_IS_PRODUCTION,
-        serverKey: process.env.VITE_SERVER_KEY,
-        clientKey: process.env.VITE_CLIENT_KEY
+        isProduction: process.env.IS_PRODUCTION,
+        serverKey: process.env.SERVER_KEY,
+        clientKey: process.env.CLIENT_KEY
 })
 
-router.get('/', (req,res) => {
+router.get('/', (req, res) => {
         res.json({ message: 'server aktif' })
 })
 

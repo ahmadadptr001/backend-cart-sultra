@@ -6,17 +6,16 @@ import snapRoute from "./routes/midtrans-route.js";
 dotenv.config();
 
 const app = express();
-const port = process.env.VITE_PORT || 3200;
+const port = process.env.PORT || 3002;
 
-app.use(cors);
+app.use(cors());
 app.use(express.json());
 
-app.use('/api/midtrans-snap/', snapRoute);
+app.use('/api/midtrans-snap', snapRoute);
 
 const message = () => {
         console.log("Server midtrans berjalan di port " + port);
 }
 
-// app.listen(port, message);
 
 export default app;
