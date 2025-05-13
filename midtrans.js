@@ -1,7 +1,6 @@
 import cors from "cors";
 import dotenv from 'dotenv';
 import express from "express";
-import serverless from "serverless-http";
 import snapRoute from "./routes/midtrans-route.js";
 
 dotenv.config();
@@ -20,4 +19,4 @@ const message = () => {
 
 // app.listen(port, message);
 
-export default serverless(app);
+export default app;

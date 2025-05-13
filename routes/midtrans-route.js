@@ -9,6 +9,10 @@ const snap = new Midtrans.Snap({
         clientKey: process.env.VITE_CLIENT_KEY
 })
 
+router.get('/', (req,res) => {
+        res.json({ message: 'server aktif' })
+})
+
 router.post('/', async (req, res) => {
         const { id, name, price, quantity } = await req.body;
         let parameter = {
