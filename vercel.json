@@ -1,0 +1,15 @@
+{
+        "version" : 2,
+        "bulids" : [
+                {
+                        "src": "./midtrans.js",
+                        "use": "@vercel/node"
+                }
+        ],
+        "routes": [
+                {
+                        "src": "/api/midtrans-snap",
+                        "dest": "./midtrans.js"
+                }
+        ]
+}
